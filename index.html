@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <ons-page>
+        <ons-carousel fullscreen swipeable auto-scroll overscrollable id="carousel">
+            <ons-carousel-item style="background-color: lightskyblue;">
+                <ons-row>
+                    <ons-col class="ons_col" id="col0">
+                    </ons-col>
+                    <ons-col class="ons_col" id="col1">
+                    </ons-col>
+                </ons-row>
+                <ons-row>
+                    <ons-col id="col2" class="ons_col"></ons-col>
+                    <ons-col id="col3" class="ons_col"></ons-col>
+                </ons-row>
+            </ons-carousel-item>
+        </ons-carousel>
+    
+        <ons-fab position="bottom right" onclick="showSearchDialog()">
+            <ons-icon icon="md-plus"></ons-icon>
+        </ons-fab>
+
+        <template id="searchCity.html">
+            <ons-dialog id="searchCity-dialog" cancelable>
+                <div style="text-align: center; padding: 10px;">
+                    <h4 style="margin: 10px;">Add new city</h4>
+                    <ons-input class="queryInput" id="queryInput" modifier="underbar" placeholder="Search City" float></ons-input>
+
+                    <div>
+                        <ons-button onclick="hideDialog('searchCity-dialog')" class="button">Cancel</ons-button>
+                        <ons-button onclick="addNewCity()" class="button">Add</ons-button>
+                    </div>
+                </div>
+            </ons-dialog>
+        </template>
+
+        <template id="card.html">
+            <ons-card>
+                <div class="cardRow">
+                    <div class="cityTitle"></div>
+                    <ons-icon size="35px" class="weatherIcon"></ons-icon>
+                </div>
+                <div class="cardRow tempContainer">
+                    <div class="temperature"></div>
+                </div>
+                <div class="cardRow" style="justify-content: center;">
+                    <ons-button class="button">Delete</ons-button>
+                </div>
+            </ons-card>
+        </template>
+    </ons-page>
+</body>
+</html>

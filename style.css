@@ -1,0 +1,33 @@
+.cityTitle{
+    /*border: 1px solid;*/
+    width: fit-content;
+    display: inline-block;
+    font-size: 28px;
+}
+.weatherIcon{
+    /*border: 1px solid;*/
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+}
+.cardRow{
+    /*border: 1px solid;*/
+    display: flex;
+    align-items: center;
+}
+.temperature{
+    /*border: 1px solid;*/
+    width: fit-content;
+    font-size: 80px;
+    height: fit-content;
+}
+.tempContainer{
+    justify-content: center;
+    height: 212px;
+}
+.queryInput{
+    margin: 10px;
+}
+.button{
+    margin: 10px;
+}
